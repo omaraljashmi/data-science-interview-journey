@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111827" />
+    <meta
+      name="description"
+      content="A private, distraction-free course for data science interview preparation."
+    />
+    <title>Data Science Interview Journey</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111827'/%3E%3Cpath d='M17 18h30M17 32h20M17 46h30' stroke='%2377e5d1' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='32' r='5' fill='%23f6c85f'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#app-view">Skip to course content</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Course navigation">
+        <a class="brand" href="#/dashboard" aria-label="Data Science Interview Journey home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><strong>Interview</strong><small>Journey</small></span>
+        </a>
+
+        <nav class="primary-nav">
+          <a href="#/dashboard" data-route="dashboard"><span data-icon="home"></span>Today</a>
+          <a href="#/chapters" data-route="chapters"><span data-icon="map"></span>Chapter map</a>
+          <a href="#/review" data-route="review"><span data-icon="review"></span>Review</a>
+          <a href="#/practice" data-route="practice"><span data-icon="code"></span>Practice</a>
+          <a href="#/mistakes" data-route="mistakes"><span data-icon="mistake"></span>Mistake bank</a>
+          <a href="#/progress" data-route="progress"><span data-icon="chart"></span>Progress</a>
+        </nav>
+
+        <div class="sidebar-foot">
+          <div class="focus-note">
+            <span class="focus-note-icon">◎</span>
+            <div><strong>Private by design</strong><small>Progress stays in this browser.</small></div>
+          </div>
+          <a href="#/settings" data-route="settings"><span data-icon="settings"></span>Study settings</a>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button class="icon-button menu-button" id="menu-button" aria-label="Open navigation" aria-expanded="false">
+            <span data-icon="menu"></span>
+          </button>
+          <div class="topbar-title"><span id="route-eyebrow">Journey</span><strong id="route-title">Today</strong></div>
+          <div class="topbar-actions">
+            <button class="intensity-chip" id="intensity-shortcut" type="button">
+              <span aria-hidden="true">◒</span><span id="intensity-label">Steady · 40 min</span>
+            </button>
+            <div class="streak-chip" title="Consecutive study days"><span aria-hidden="true">◆</span><b id="streak-count">0</b><span class="streak-word">day streak</span></div>
+          </div>
+        </header>
+        <main id="app-view" tabindex="-1"></main>
+      </div>
+    </div>
+    <div class="nav-scrim" id="nav-scrim"></div>
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="data.js" defer></script>
+    <script src="state.js" defer></script>
+    <script src="course-app.js" defer></script>
+  </body>
+</html>
